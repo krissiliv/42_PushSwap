@@ -53,14 +53,14 @@ void	push_swap(t_stack **head, t_stack **head2)
 		sab(head, 'a', true);
 		return ;
 	}
-	hhead = copy_stack(*head);
+	hhead = copy_stack(*head); // copy stack to use it for checking which algorithm is better
 	hhead2 = NULL;
 	if (!hhead)
 		return (free_stack(&hhead), free_stack(&hhead2));
 	if (list_len(*head) == 3 || list_len(*head) == 5)
 		small_list_alg(head, head2, 1);
 	else if (my_1st_push_swap(&hhead, &hhead2, 0) \
-					< my_2nd_push_swap(&hhead, &hhead2, 0))
+					< my_2nd_push_swap(&hhead, &hhead2, 0)) // compare the two sorting algorithms
 		my_1st_push_swap(head, head2, 1);
 	else
 		my_2nd_push_swap(head, head2, 1);
@@ -86,7 +86,7 @@ static int	executing_push_swap(int argc, char **argv, int *error)
 		write(2, "Error\n", 6);
 		return (free_stack(&head), free_stack(&head2), 0);
 	}
-	if (check_double(head) == 1)
+	if (check_double(head) == 1) // check that there are no duplicate numbers
 		return (free_stack(&head), free_stack(&head2), 0);
 	push_swap(&head, &head2);
 	return (free_stack(&head), free_stack(&head2), 1);

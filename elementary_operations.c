@@ -12,7 +12,7 @@
 
 #include "push_swap.h"
 
-void	sab(t_stack **head, char ab, bool print)
+void	sab(t_stack **head, char ab, bool print) // swap the first two elements at the top of stack a or b
 {
 	t_stack	*tmp;
 
@@ -27,7 +27,7 @@ void	sab(t_stack **head, char ab, bool print)
 		write(1, "sb\n", 3);
 }
 
-void	pab(t_stack **head_from, t_stack **head_to, char ab, bool print)
+void	pab(t_stack **head_from, t_stack **head_to, char ab, bool print) // push to stack a or b
 {
 	t_stack	*new_node;
 	t_stack	*new_head;
@@ -53,7 +53,7 @@ void	pab(t_stack **head_from, t_stack **head_to, char ab, bool print)
 		write(1, "pb\n", 3);
 }
 
-void	rab(t_stack **head, char ab, bool print)
+void	rab(t_stack **head, char ab, bool print) // rotate stack a or b
 {
 	t_stack	*new_head;
 	t_stack	*old_head;
@@ -71,7 +71,7 @@ void	rab(t_stack **head, char ab, bool print)
 		write(1, "rb\n", 3);
 }
 
-void	rrab(t_stack **head, char ab, bool print)
+void	rrab(t_stack **head, char ab, bool print) // reverse rotate stack a or b
 {
 	t_stack	*old_head;
 	t_stack	*tmp;

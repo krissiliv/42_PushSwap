@@ -19,7 +19,7 @@ t_stack	*last_node(t_stack *head)
 	return (head);
 }
 
-int	smaller_node_pos1(t_stack *head, int cur_data)
+int	smaller_node_pos1(t_stack *head, int cur_data) // check which node is the next that's value is bigger than the value of the current node
 {
 	int	i;
 
@@ -32,7 +32,7 @@ int	smaller_node_pos1(t_stack *head, int cur_data)
 	return (i);
 }
 
-int	smallest_pos12(t_stack *head)
+int	smallest_pos12(t_stack *head) // check which node's value is the smallest
 {
 	int		i;
 	t_stack	*smallest;
@@ -57,7 +57,7 @@ int	smallest_pos12(t_stack *head)
 	return (i);
 }
 
-int	nearst_npos2(t_stack *head, int cur_data)
+int	nearst_npos2(t_stack *head, int cur_data) // check which node's value has the smallest difference from the current node's value
 {
 	int					i;
 	t_stack				*curr;
@@ -85,7 +85,7 @@ int	nearst_npos2(t_stack *head, int cur_data)
 	return (i);
 }
 
-t_stack	*optimal_node_to_move2(t_stack **head2, t_stack *head)
+t_stack	*optimal_node_to_move2(t_stack **head2, t_stack *head) // optimization
 {
 	int		cost;
 	int		ccst;

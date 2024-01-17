@@ -12,7 +12,7 @@
 
 #include "push_swap.h"
 
-void	ss(t_stack **head, t_stack **head2, bool print)
+void	ss(t_stack **head, t_stack **head2, bool print) // swap the first two elements at the top of stack a and b
 {
 	sab(head, 'a', false);
 	sab(head2, 'b', false);
@@ -20,7 +20,7 @@ void	ss(t_stack **head, t_stack **head2, bool print)
 		write(1, "ss\n", 3);
 }
 
-void	rr(t_stack **head, t_stack **head2, bool print)
+void	rr(t_stack **head, t_stack **head2, bool print) // rotate stack a and b
 {
 	rab(head, 'a', false);
 	rab(head2, 'b', false);
@@ -28,7 +28,7 @@ void	rr(t_stack **head, t_stack **head2, bool print)
 		write(1, "rr\n", 3);
 }
 
-void	rrr(t_stack **head, t_stack **head2, bool print)
+void	rrr(t_stack **head, t_stack **head2, bool print) // reverse rotate stack a and b
 {
 	rrab(head, 'a', false);
 	rrab(head2, 'b', false);

@@ -76,25 +76,3 @@ int	ft_printf(const char *format, ...)
 	b = st->bytes;
 	return (free(st), b);
 }
-
-/*#include <stdio.h>
-int	main(void)
-{
-	char	a = 'a';
-	char	*ptr = &a;
-	int		n = 1000;
-
-	int p = ft_printf("% %c and %x and %X and %d and %u and %s and 
-	%i and %c and %p %%%%", a, 200, 25968954, -498, 106, 
-	"Hello my world string", -n, 'Y', ptr);
-	printf("\nMine:%d\n", p);
-	int m = ft_printf("My string: %p\n", ptr);
-	printf("Mine:%d\n\n", m); 
-
-	int o = printf("%c and %x and %X and %d and %u and %s and 
-	%i and %c and %p \n", a, 200, 25968954, -498, 106, 
-	"Hello my world string", -n, 'Y', ptr);
-   	printf("Orig:%d\n", o);
-	int i = printf("My string: %p\n", ptr);
-	printf("Orig:%d\n", i); //printf number of bytes it used
-}*/

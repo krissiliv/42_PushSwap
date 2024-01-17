@@ -74,7 +74,7 @@ void	prntstack(t_stack *head)
 	}
 }
 
-t_stack	*copy_stack(t_stack *stck)
+t_stack	*copy_stack(t_stack *stck) // to first test the stepnumber in order to make the program choose the right algorithm
 {
 	t_stack	*head;
 	t_stack	*temp;

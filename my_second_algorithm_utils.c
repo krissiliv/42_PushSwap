@@ -19,7 +19,7 @@ long long int	abs_value2(long long int i)
 	return (i);
 }
 
-int	npos2(t_stack *list, t_stack *node)
+int	npos2(t_stack *list, t_stack *node) // check the position of the node in the list
 {
 	int	i;
 

@@ -12,7 +12,7 @@
 
 #include "push_swap.h"
 
-static int	alg1(t_stack **node, t_stack **list, int insert_pos, bool print)
+static int	alg1(t_stack **node, t_stack **list, int insert_pos, bool print) // algorithm 1 uses reverse rotate
 {
 	int	i;
 	int	j;
@@ -30,7 +30,7 @@ static int	alg1(t_stack **node, t_stack **list, int insert_pos, bool print)
 	return (i);
 }
 
-static int	alg2(t_stack **node, t_stack **list, int insert_pos, bool print)
+static int	alg2(t_stack **node, t_stack **list, int insert_pos, bool print) // algorithm 2 uses rotate. this is distinguished from algorithm 1 for optimization
 {
 	int	i;
 	int	j;
@@ -55,7 +55,7 @@ int	insert_at_right_pos2(t_stack **node, t_stack **list, bool print)
 
 	i = 0;
 	insert_pos = nearst_npos2(*list, *(int *)(*node)->data);
-	if (list_len(*list) - insert_pos <= insert_pos - 0)
+	if (list_len(*list) - insert_pos <= insert_pos - 0) // choose the algorithm that takes the least number of operations
 		return (i + alg1(node, list, insert_pos, print));
 	return (i + alg2(node, list, insert_pos, print));
 }
@@ -69,7 +69,7 @@ static int	push_back_to_head(t_stack **head, t_stack **head2, bool print)
 	while (*head2)
 	{
 		optimal_node_pos = \
-			npos2(*head2, optimal_node_to_move2(head2, *head));
+			npos2(*head2, optimal_node_to_move2(head2, *head)); // find the optimal node to move and its position
 		if (list_len(*head2) - optimal_node_pos <= optimal_node_pos - 0)
 		{
 			i += list_len(*head2) - optimal_node_pos;
